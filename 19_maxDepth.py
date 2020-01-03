@@ -24,9 +24,8 @@ class Solution:
                 q1 = q2
                 q2 = Queue()
                 count+=1
-                
         return count
+    
     def successor(self,node):
-        
         return node.children
         
