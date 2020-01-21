@@ -6,6 +6,28 @@
 #         self.right = None
 from queue import Queue
 class Solution:
+    def __init__(self):
+        self.list = []
+    
+    def check(self, root, level):  
+        if root == None:
+            return
+        if level == len(self.list):
+            self.list.append([root.val])
+        elif level < len(self.list):
+            self.list[level].append(root.val)
+            
+        self.check(root.left, level+1)
+        self.check(root.right, level+1)
+            
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        if root == None:
+            return []
+        self.check(root, 0)
+        return self.list
+    
+ # ------------------------------------------------------------------------------      
+   
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         if root == None:
             return None
