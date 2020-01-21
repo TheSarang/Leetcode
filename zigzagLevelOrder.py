@@ -6,6 +6,38 @@
 #         self.right = None
 
 class Solution:
+    def _helper(self, node):
+        return [node.left, node.right]
+    
+    def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
+        q1 = []
+        if not root:
+            return []
+        num = 0
+        list1 = []
+        q1.append(root)
+        while q1 != []:
+            size = len(q1)
+            temp = []
+            while size>0:
+                curr = q1.pop(0)
+                temp.append(curr.val)
+                if curr.left:
+                    q1.append(curr.left)
+                if curr.right:
+                    q1.append(curr.right)
+                size -= 1
+            
+            if num%2 == 0:
+                list1.append(temp)
+            else:
+                list1.append(temp[::-1])
+            num +=1
+            
+        return list1
+   
+#------------------------------------------------------------------------------------------------------------
+
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         if root == None:
             return []
