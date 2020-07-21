@@ -1,3 +1,1 @@
-# Leetcode Programming Problems in Python
- 
- 
+# Leetcode Programming Problems - Python 
