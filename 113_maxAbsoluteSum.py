@@ -1,5 +1,6 @@
 class Solution:
     def maxAbsoluteSum(self, nums: List[int]) -> int:
+        # Kadanes algorithm
         GM = LMP = LMN = nums[0]
         for i in range(1, len(nums)):
             LMP = max(nums[i]+LMP, nums[i])
