@@ -1,6 +1,6 @@
 import collections
 class Solution:
-    def findDiagonalOrder(self, nums: List[List[int]]) -> List[int]:
+    def findDiagonalOrder2(self, nums: List[List[int]]) -> List[int]:
         
         res = []
         q = collections.deque()
