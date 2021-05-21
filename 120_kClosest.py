@@ -18,7 +18,7 @@ import heapq
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         heap = []
-        # TC = O(N*logN)
+        # TC = O(NlogK)
         # SC = O(N)
         for x,y in points:
             distance = math.sqrt((0-x)**2 + (0-y)**2)
@@ -30,7 +30,7 @@ class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:    
         dict_ = {}
         res = []
-        # TC = O(N)+ O(N*logN) + O(K)
+        # TC = O(N)+ O(NlogN) + O(K)
         # SC = O(N)
         for x,y in points:
             distance = math.sqrt((0-x)**2 + (0-y)**2)
