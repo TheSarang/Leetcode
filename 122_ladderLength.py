@@ -1,7 +1,28 @@
 from collections import deque
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
-        
+        if endWord not in wordList:
+            return 0
+        wordList = set(wordList)
+        q1 = deque()
+        q1.append((beginWord, 1))
+        visited = set()
+        visited.add(beginWord)
+        while q1:
+            word_, step = q1.popleft()
+            if word_ == endWord:
+                return step
+            alphas = 'abcdefghijklmnopqrstuvwxyz'
+            for alpha in alphas:
+                for i in range(len(word_)):
+                    temp_word = word_[:i] + alpha + word_[i+1:]
+                    if temp_word in wordList and temp_word not in visited:
+                        q1.append((temp_word, step + 1))
+                        visited.add(temp_word)
+        return 0
+    
+#     --------------------------------------------------
+
 #       TC = O(N*M^2)
 #       SC = O(N*M^2)
 
