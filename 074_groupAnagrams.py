@@ -20,7 +20,6 @@ class Solution:
 
 ------------------------------------------------------------
 
-
 Space Complexity: O(n*k), k = Length of the longest string
 Time Complexity: O(n*k), k = Length of the longest string
 
