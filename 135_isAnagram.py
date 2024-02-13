@@ -1,5 +1,9 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+
+        # Time Complexity: O(n)
+        # Space Complexity: O(n)
+        
         res = dict()
       
         for alpha in s:
