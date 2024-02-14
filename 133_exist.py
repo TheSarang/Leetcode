@@ -1,3 +1,6 @@
+# Time Complexity: O(N*3^L) where N is the number of cells in the board and L is the length of the word to be matched.
+# Space Complexity: O(L) where LLL is the length of the word to be matched.
+
 class Solution:
     def __init__(self):
         self.res = False
