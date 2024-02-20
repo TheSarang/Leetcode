@@ -5,9 +5,6 @@ class Solution:
         BF
         
         1] sort an array based on distance return k values
-    
-        
-        
         '''
         
         # points.sort(key=lambda x: (x[0]+x[0])**2 + (x[1]+x[1])**2)
