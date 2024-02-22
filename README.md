@@ -1,1 +1,1 @@
-# Leetcode Repository: Working Python Solution
+# Leetcode: Repository of Python Solutions
