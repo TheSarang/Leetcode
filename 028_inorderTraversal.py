@@ -5,6 +5,8 @@
 #         self.left = None
 #         self.right = None
 
+# Recursive
+
 class Solution:
     def __init__(self):
         self.list1 = []
@@ -16,20 +18,27 @@ class Solution:
         self.list1.append(root.val)
         self.inorderTraversal(root.right)
         return self.list1
+
+# Iterative
+
+class Solution:
+    def __init__(self):
+        self.list1 = []
         
-        # stack = []
-        # ans = []
-        # cur = root
-        # while True:
-        #     if cur != None: 
-        #         stack.append(cur)
-        #         cur = cur.left
-        #     elif stack:
-        #         cur = stack.pop()
-        #         ans.append(cur.val)
-        #         cur = cur.right
-        #     else:
-        #         break
-        # return ans
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+        stack = []
+        ans = []
+        cur = root
+        while True:
+          if cur != None: 
+            stack.append(cur)
+            cur = cur.left
+          elif stack:
+            cur = stack.pop()
+            ans.append(cur.val)
+            cur = cur.right
+          else:
+            break
+        return ans
                 
                 
