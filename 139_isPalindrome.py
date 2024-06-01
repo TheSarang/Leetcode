@@ -15,7 +15,7 @@ class Solution:
 
         # OPTIMIZED
         # TIME COMPLEXITY: O(N)
-        # SPACE COMPLEXITY: O(N)
+        # SPACE COMPLEXITY: O(1)
 
         l, r = 0, len(s) - 1
 
