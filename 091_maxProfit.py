@@ -1,3 +1,7 @@
+# Modified Kadane's algorithm
+# TC: O(n)
+# SC: O(1)
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if prices == []:
