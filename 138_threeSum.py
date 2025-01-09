@@ -1,5 +1,8 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
+        # TC: O(n)^2
+        # SC: O(n)
+
         n = len(nums)
         nums.sort()
         ans = []
